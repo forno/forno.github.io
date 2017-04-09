@@ -1,15 +1,11 @@
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
 $('#resultModal').on('show.bs.modal', function(e) {
   "use strict";
   var alerts = []
   var form = $(e.relatedTarget).parents("form")
-  const targets = form.find("textarea").val().split('\n')
+  const targets = form.find("textarea").val().split('\n').filter(function(v){return v.length != 0})
   var count = parseInt(form.find("input").val(), 10)
 
-  if (targets.length <= count) {
+  if (targets.length < count) {
     count = targets.length
     alerts.push(
       `<div class="alert alert-warning" role="alert">
@@ -18,11 +14,12 @@ $('#resultModal').on('show.bs.modal', function(e) {
   }
 
   for (let i = 0; i < count; ++i) {
-    let rand = getRandomInt(i, targets.length);
-    [targets[i], targets[rand]] = [targets[rand], targets[i]] 
+    let rand = Math.floor(Math.random() * (targets.length - i)) + i
+    let tmp = targets[i]
+    targets[i] = targets[rand]
+    targets[rand] = tmp;
   }
   const chosen = targets.slice(0, count)
-                        .filter(function(v){return v.length != 0})
                         .map(function(v){return `<li>${v}</li>`})
   const send = chosen.length !== 0 ? "<ul>" + chosen.join("") + "</ul>" : "";
   if (send === "")
