@@ -47,6 +47,6 @@ $(function(){
           noticer.html('<span class="text-success">Completed</span>')
         }}, 1000)
     else
-      noticer.html('<span class="text-danger">Chosen members are notthing.</span>')
+      noticer.html('<span class="text-danger">Chosen members are nothing.</span>')
   })
 })
