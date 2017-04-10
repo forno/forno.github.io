@@ -13,22 +13,34 @@ $('#resultModal').on('show.bs.modal', function(e) {
       </div>`)
   }
 
+  if (!count)
+    alerts.push(
+      `<div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>`)
+
   for (let i = 0; i < count; ++i) {
     let rand = Math.floor(Math.random() * (targets.length - i)) + i
     let tmp = targets[i]
     targets[i] = targets[rand]
     targets[rand] = tmp;
   }
-  const chosen = targets.slice(0, count)
+  var chosen = targets.slice(0, count)
                         .map(function(v){return `<li>${v}</li>`})
-  const send = chosen.length !== 0 ? "<ul>" + chosen.join("") + "</ul>" : "";
-  if (send === "")
-    alerts.push(
-      `<div class="alert alert-danger" role="alert">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>`)
 
   var modalBody = $(this).find(".modal-body")
-  modalBody.html(send)
-  modalBody.append(alerts.join(""))
+  modalBody.find(".error").html(alerts.join(""))
+
+  ;(function() {
+    var sender = modalBody.find(".result").empty()
+    var intervalID
+    function delayFunc() {
+      if (!chosen.length) {
+        clearInterval(intervalID)
+        return
+      }
+      sender.append(chosen.pop())
+    }
+    intervalID = setInterval(delayFunc, 1000)
+  }())
 })
