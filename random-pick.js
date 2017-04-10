@@ -40,5 +40,5 @@ $('#resultModal').on('show.bs.modal', function(e) {
         noticer.html('<span class="text-success">Completed</span>')
       }}, 1000)
   else
-    noticer.html('<span class="text-danger">Chosen members are non-exist.</span>')
+    noticer.html('<span class="text-danger">Chosen members are notthing.</span>')
 })
