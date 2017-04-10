@@ -25,27 +25,20 @@ $('#resultModal').on('show.bs.modal', function(e) {
     targets[i] = targets[rand]
     targets[rand] = tmp;
   }
-  var chosen = targets.slice(0, count)
-                        .map(function(v){return `<li>${v}</li>`})
+  var chosen = targets.slice(0, count).map(function(v){return `<li>${v}</li>`})
 
   var modalBody = $(this).find(".modal-body")
   modalBody.find(".error").html(alerts.join(""))
 
-  ;(function() {
-    var sender = modalBody.find(".result").empty()
-    var noticer = modalBody.find(".notice").html('<span class="text-muted">Now picking...</span>')
-    var intervalID
-    function delayFunc() {
+  var sender = modalBody.find(".result").empty()
+  var noticer = modalBody.find(".notice").html('<span class="text-muted">Now picking...</span>')
+  if (chosen.length)
+    var intervalID = setInterval(function(){
       sender.append(chosen.pop())
       if (!chosen.length) {
         clearInterval(intervalID)
         noticer.html('<span class="text-success">Completed</span>')
-        return
-      }
-    }
-    if (chosen.length)
-      intervalID = setInterval(delayFunc, 1000)
-    else
-      noticer.empty()
-  }())
+      }}, 1000)
+  else
+    noticer.html('<span class="text-danger">Chosen members are non-exist.</span>')
 })
