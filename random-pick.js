@@ -33,14 +33,19 @@ $('#resultModal').on('show.bs.modal', function(e) {
 
   ;(function() {
     var sender = modalBody.find(".result").empty()
+    var noticer = modalBody.find(".notice").html('<span class="text-muted">Now picking...</span>')
     var intervalID
     function delayFunc() {
+      sender.append(chosen.pop())
       if (!chosen.length) {
         clearInterval(intervalID)
+        noticer.html('<span class="text-success">Completed</span>')
         return
       }
-      sender.append(chosen.pop())
     }
-    intervalID = setInterval(delayFunc, 1000)
+    if (chosen.length)
+      intervalID = setInterval(delayFunc, 1000)
+    else
+      noticer.empty()
   }())
 })
