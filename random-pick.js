@@ -12,6 +12,14 @@ $(function(){
     const targets = form.find("textarea").val().split('\n').filter(function(v){return v.length != 0})
     var count = parseInt(form.find("input").val(), 10)
 
+    if (!count || count < 1) {
+      count = 1
+      alerts.push(
+        `<div class="alert alert-warning" role="alert">
+          <strong>Warning!</strong> The count is invalid value. I regard it as 1.
+        </div>`)
+    }
+
     if (targets.length < count) {
       count = targets.length
       alerts.push(
@@ -20,10 +28,10 @@ $(function(){
         </div>`)
     }
 
-    if (!count)
+    if (!targets.length)
       alerts.push(
         `<div class="alert alert-danger" role="alert">
-          <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          <strong>Oh snap!</strong> Change members and try submitting again.
         </div>`)
 
     for (let i = 0; i < count; ++i) {
