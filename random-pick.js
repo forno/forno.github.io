@@ -46,12 +46,15 @@ $(function(){
     modalBody.find(".error").html(alerts.join(""))
 
     var sender = modalBody.find(".result").empty()
-    if (!chosen.length)
+    if (!chosen.length) {
       modalBody.find(".notice").html('<span class="text-danger">Chosen members are nothing.</span>')
-    else {
+      modalBody.find(".progress-bar").addClass("bg-danger").css("width", "100%")
+    } else {
       var noticer = modalBody.find(".notice").html('<span class="text-muted">Now picking...</span>')
+      var progress = modalBody.find(".progress-bar").removeClass("bg-danger").css("width", "0%")
       intervalID = setInterval(function(){
         sender.append(chosen.pop())
+        progress.css("width", (count - chosen.length) * 100 / count + "%")
         if (!chosen.length) {
           clearInterval(intervalID)
           noticer.html('<span class="text-success">Completed</span>')
