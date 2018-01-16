@@ -35,3 +35,7 @@ footer > .container {
   padding: 3rem 0rem;
   text-align: center;
 }
+
+table {
+  text-align: left;
+}
