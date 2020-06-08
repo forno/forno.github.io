@@ -14,11 +14,27 @@ $(function(){
   })
 
   modal.find('.modal-footer .btn-primary').on('click', function() {
+    var text = $('#english-text').val()
+    if (!text) {
+      $('form').before(`<div class="alert alert-warning alert-dismissible fade show" role="alert">
+          Copy text are no here.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>`)
+      return
+    }
     var textarea = $('<textarea></textarea>')
-    textarea.text($('#english-text').val().replace(/\n/g, ' ').replace(/\.   */g, '. \n').replace(/\. ?/g, '.\n'))
+    textarea.text(text.replace(/\n/g, ' ').replace(/\.   */g, '. \n').replace(/\. ?/g, '.\n'))
     $(this).append(textarea)
     textarea.select()
     document.execCommand('copy')
     textarea.remove()
+    $('form').before(`<div class="alert alert-success alert-dismissible fade show" role="alert">
+        Copy success!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>`)
   })
 })
