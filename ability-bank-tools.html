@@ -1,105 +1,208 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="FORNO">
-  <meta name="description" content="Ramdon pick up from user input.">
-  <title>Random pick: FORNO Tools</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="myall.css" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarContents" aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="/">FORNO Tools</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="FORNO" />
+    <meta name="description" content="Ramdon pick up from user input." />
+    <title>Random pick: FORNO Tools</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="myall.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <button
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarContents"
+        aria-controls="navbarContents"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="/">FORNO Tools</a>
 
-    <div class="collapse navbar-collapse" id="navbarContents">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://forno.github.io" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="random-pick.html">Random pick</a>
-            <a class="dropdown-item" href="reformat-english.html">Reformat English</a>
-            <a class="dropdown-item active" href="#">Ability Bank<span class="sr-only">(current)</span></a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarContents">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="http://forno.github.io"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Tools</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="random-pick.html">Random pick</a>
+              <a class="dropdown-item" href="reformat-english.html"
+                >Reformat English</a
+              >
+              <a class="dropdown-item active" href="#"
+                >Ability Bank<span class="sr-only">(current)</span></a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <div class="container">
-    <div class="starter-template">
-      <h1>Ability Bank Tools</h1>
-      <p class="lead">URI generator for Ability Bank</p>
-      <form>
-        <div class="form-group">
-          <label for="host-input">Host</label>
-          <input type="text" class="form-control" id="host-input" placeholder="Host of Ability Bank" autofocus required />
-        </div>
-        <div class="form-group">
-          <label for="port-input">Port</label>
-          <input type="number" class="form-control" id="port-input" value="4200" required />
-        </div>
-        <div class="form-group">
-          <label for="path-input">Path</label>
-          <input type="text" class="form-control" id="path-input" value="#/oauthorize" required />
-        </div>
-        <div class="form-group">
-          <label for="client-id-input">Client ID</label>
-          <input type="text" class="form-control" id="client-id-input" required />
-        </div>
-        <div class="form-group">
-          <label for="secret-id-input">Secret ID</label>
-          <input type="text" class="form-control" id="secret-id-input" required />
-        </div>
-        <div class="form-group">
-          <label for="redirect-input">Redirect</label>
-          <input type="text" class="form-control" id="redirect-input" value="UnityEditor" required />
-        </div>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#resultModal">Create</button>
-      </form>
-    </div>
-  </div><!-- /.container -->  
-
-  <footer>
     <div class="container">
-      <span class="text-muted">Copyright &copy; 2017 FORNO All Right Reserved.</span>
-    </div>
-  </footer>
-
-  <!-- Modal -->
-  <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="resultModalLabel">Verify URI</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+      <div class="starter-template">
+        <h1>Ability Bank Tools</h1>
+        <p class="lead">URI generator for Ability Bank</p>
+        <form>
+          <div class="form-group">
+            <label for="host-input">Host</label>
+            <input
+              type="text"
+              class="form-control"
+              id="host-input"
+              placeholder="Host of Ability Bank"
+              autofocus
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="port-input">Port</label>
+            <input
+              type="number"
+              class="form-control"
+              id="port-input"
+              value="4200"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="path-input">Path</label>
+            <input
+              type="text"
+              class="form-control"
+              id="path-input"
+              value="#/oauthorize"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="client-id-input">Client ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="client-id-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="secret-id-input">Secret ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="secret-id-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="redirect-input">Redirect</label>
+            <input
+              type="text"
+              class="form-control"
+              id="redirect-input"
+              value="UnityEditor"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            data-toggle="modal"
+            data-target="#resultModal"
+          >
+            Create
           </button>
-        </div>
-        <div class="modal-body">
-          <p></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </form>
+      </div>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+      <div class="container">
+        <span class="text-muted"
+          >Copyright &copy; 2017 FORNO All Right Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="resultModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="resultModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultModalLabel">Verify URI</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="ability-bank-tools.js"></script>
-</body>
+    <script src="ability-bank-tools.js"></script>
+  </body>
 </html>
