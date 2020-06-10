@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-top-layout`,
     {
-      resolve: 'gatsby-plugin-material-ui',
+      resolve: "gatsby-plugin-material-ui",
       // If you want to use styled components you should change the injection order.
       options: {
         // stylesProvider: {
@@ -41,4 +41,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
