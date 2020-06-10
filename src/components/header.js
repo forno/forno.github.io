@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
+import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
@@ -10,8 +11,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import FormatAlignLeftIcon from "@material-ui/icons/FormatAlignLeft";
+import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
-import CodeIcon from "@material-ui/icons/Code";
 import Link from "./link";
 
 const Header = ({ siteTitle }) => {
@@ -69,12 +71,31 @@ const Header = ({ siteTitle }) => {
           onKeyDown={toggleDrawer("left", false)}
         >
           <List>
-            <ListItem>
-              <ListItemIcon>
-                <CodeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Here is menu." />
-            </ListItem>
+            <Link to="/about" color="inherit">
+              <ListItem>
+                <ListItemIcon>
+                  <InfoIcon />
+                </ListItemIcon>
+                <ListItemText primary="About" />
+              </ListItem>
+            </Link>
+            <Divider />
+            <Link to="/tools/reformat-english" color="inherit">
+              <ListItem>
+                <ListItemIcon>
+                  <FormatAlignLeftIcon />
+                </ListItemIcon>
+                <ListItemText primary="Reformat English" />
+              </ListItem>
+            </Link>
+            <Link to="/tools/pick-random" color="inherit">
+              <ListItem>
+                <ListItemIcon>
+                  <FormatAlignLeftIcon />
+                </ListItemIcon>
+                <ListItemText primary="Pick Random" />
+              </ListItem>
+            </Link>
           </List>
         </div>
       </Drawer>
