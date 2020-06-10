@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -28,32 +27,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Layout = ({ children, pageTitle, createdYear }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-	const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <>
       <SEO title={pageTitle} />
-			<div className={classes.root}>
-				<CssBaseline />
-      	<Header siteTitle={data.site.siteMetadata.title} />
-				<Container component="main" className={classes.main} maxWidth="sm">
-					{children}
-				</Container>
-				<footer className={classes.footer}>
-					<Container maxWidth="sm">
-          	<Copyright createdYear={createdYear} />
-					</Container>
-				</footer>
-			</div>
+      <div className={classes.root}>
+        <CssBaseline />
+        <Header />
+        <Container component="main" className={classes.main} maxWidth="sm">
+          {children}
+        </Container>
+        <footer className={classes.footer}>
+          <Container maxWidth="sm">
+            <Copyright createdYear={createdYear} />
+          </Container>
+        </footer>
+      </div>
     </>
   );
 };
