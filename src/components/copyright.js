@@ -22,7 +22,6 @@ export default function Copyright({ createdYear }) {
         {data.site.siteMetadata.author}
       </MuiLink>{" "}
       {createdYear}
-      {"."}
     </Typography>
   );
 }
