@@ -4,9 +4,7 @@ import Copyright from "./copyright"
 
 const Footer = ({ createdYear }) => (
   <footer>
-    <Container maxWidth="sm">
-      <Copyright createdYear={createdYear} />
-    </Container>
+    <Copyright createdYear={createdYear} />
   </footer>
 );
 
