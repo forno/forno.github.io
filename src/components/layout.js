@@ -10,14 +10,16 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import Copyright from "./copyright";
 import "./layout.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, created_year }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -35,13 +37,15 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()} FORNO, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Copyright created_year={created_year} author={data.site.siteMetadata.author} />
         </footer>
       </div>
     </>
   );
+};
+
+Layout.defaultProps = {
+  created_year: new Date().getFullYear()
 };
 
 Layout.propTypes = {

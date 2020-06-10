@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `FORNO's portfolio`,
     description: `FORNO's portfolio for every develop`,
-    author: `@forno_recsys`,
+    author: `FORNO`,
   },
   plugins: [
     `gatsby-plugin-top-layout`,
