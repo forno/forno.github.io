@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
 import Copyright from "./copyright"
 
 const Footer = ({ createdYear }) => (
