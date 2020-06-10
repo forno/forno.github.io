@@ -4,7 +4,7 @@ import Container from "@material-ui/core/Container";
 
 import SEO from "./seo";
 import Header from "./header";
-import Copyright from "./copyright";
+import Footer from "./footer";
 
 const Layout = ({ children, pageTitle, createdYear }) => (
   <>
@@ -13,11 +13,7 @@ const Layout = ({ children, pageTitle, createdYear }) => (
     <Container component="main" maxWidth="sm">
       {children}
     </Container>
-    <footer>
-      <Container maxWidth="sm">
-        <Copyright createdYear={createdYear} />
-      </Container>
-    </footer>
+    <Footer createdYear={createdYear} />
   </>
 );
 

@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => {
 };
 
 Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
+  siteTitle: PropTypes.string,
 };
 
 export default Header;
