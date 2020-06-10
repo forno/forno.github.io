@@ -13,7 +13,6 @@
     "gatsby-plugin-manifest": "latest",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-offline": "latest",
-    "gatsby-plugin-react-helmet": "latest",
     "gatsby-plugin-sharp": "latest",
     "gatsby-source-filesystem": "latest",
     "gatsby-transformer-sharp": "latest",
