@@ -11,7 +11,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
-import CodeIcon from '@material-ui/icons/Code';
+import CodeIcon from "@material-ui/icons/Code";
 import Link from "./link";
 
 const Header = ({ siteTitle }) => {
@@ -29,18 +29,26 @@ const Header = ({ siteTitle }) => {
 
   const [state, setState] = React.useState({ left: false });
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
       return;
     }
 
     setState({ ...state, [anchor]: open });
-  }
+  };
 
   return (
     <>
       <AppBar position="static">
         <Toolbar>
-          <IconButton onClick={toggleDrawer("left", true)} edge="start" color="inherit" aria-label="left">
+          <IconButton
+            onClick={toggleDrawer("left", true)}
+            edge="start"
+            color="inherit"
+            aria-label="left"
+          >
             <MenuIcon />
           </IconButton>
           <Link to="/" color="inherit">
@@ -50,7 +58,11 @@ const Header = ({ siteTitle }) => {
           </Link>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={state["left"]} onClose={toggleDrawer("left", false)}>
+      <Drawer
+        anchor="left"
+        open={state["left"]}
+        onClose={toggleDrawer("left", false)}
+      >
         <div
           role="presentation"
           onClick={toggleDrawer("left", false)}
@@ -58,14 +70,16 @@ const Header = ({ siteTitle }) => {
         >
           <List>
             <ListItem>
-              <ListItemIcon><CodeIcon /></ListItemIcon>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
               <ListItemText primary="Here is menu." />
             </ListItem>
           </List>
         </div>
       </Drawer>
     </>
-  )
+  );
 };
 
 Header.propTypes = {

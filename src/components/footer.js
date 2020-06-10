@@ -1,5 +1,5 @@
 import React from "react";
-import Copyright from "./copyright"
+import Copyright from "./copyright";
 
 const Footer = ({ createdYear }) => (
   <footer>

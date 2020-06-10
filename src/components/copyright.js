@@ -30,5 +30,5 @@ export default function Copyright({ createdYear, author, contact }) {
 }
 
 Copyright.defaultProps = {
-  createdYear: new Date().getFullYear()
-}
+  createdYear: new Date().getFullYear(),
+};
