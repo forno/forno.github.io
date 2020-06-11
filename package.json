@@ -24,6 +24,7 @@
     "react-helmet": "latest"
   },
   "devDependencies": {
+    "gh-pages": "latest",
     "prettier": "latest"
   },
   "keywords": [
