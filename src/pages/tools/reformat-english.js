@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import Popover from "@material-ui/core/Popover";
 import TextField from "@material-ui/core/TextField";
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import AssignmentIcon from "@material-ui/icons/Assignment";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import Layout from "../../components/layout";
@@ -11,9 +11,9 @@ const ReformatEnglish = () => {
   const [text, setText] = React.useState("");
   const handleChange = (event) => {
     const newText = event.target.value
-              .replace(/\n/g, " ")
-              .replace(/\. {2,}/g, ". \n")
-              .replace(/\. ?/g, ".\n");
+      .replace(/\n/g, " ")
+      .replace(/\. {2,}/g, ". \n")
+      .replace(/\. ?/g, ".\n");
     setText(newText);
   };
 
@@ -21,7 +21,7 @@ const ReformatEnglish = () => {
   const handleAnchorOpen = (event) => setAnchorEl(event.currentTarget);
   const handleAnchorClose = () => setAnchorEl(null);
   const anchorOpen = Boolean(anchorEl);
-  const anchorId = anchorOpen ? 'copied-popover' : undefined;
+  const anchorId = anchorOpen ? "copied-popover" : undefined;
 
   return (
     <>
@@ -56,12 +56,12 @@ const ReformatEnglish = () => {
         anchorEl={anchorEl}
         onClose={handleAnchorClose}
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
+          vertical: "bottom",
+          horizontal: "center",
         }}
         transformorigin={{
-          vertical: 'top',
-          horizontal: 'center',
+          vertical: "top",
+          horizontal: "center",
         }}
       >
         Copy success
