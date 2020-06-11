@@ -35,7 +35,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "deploy": "npm run format && npm run build && gh-pages -d public -b master",
+    "deploy": "npm run format && npm run build && cp LICENSE public && gh-pages -d public -b master",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
