@@ -49,8 +49,8 @@ const ReformatEnglish = () => {
         <p>Reformat english text for translation system.</p>
         <TextField
           id="english-text"
-          label="Source text(unformated)"
-          placeholder="The unformated English"
+          label="English text(Auto Format)"
+          placeholder="Plese put unformated English"
           fullWidth
           variant="outlined"
           multiline
