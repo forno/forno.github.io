@@ -3,7 +3,7 @@ module.exports = {
     title: `FORNO's portfolio`,
     description: `FORNO's portfolio for every develop`,
     author: `FORNO`,
-    contact: `https://twitter.com/forno_recsys`,
+    contact: `https://twitter.com/forno_fornya`,
   },
   plugins: [
     `gatsby-plugin-top-layout`,
