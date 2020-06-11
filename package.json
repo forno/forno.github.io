@@ -19,6 +19,7 @@
     "gatsby-transformer-sharp": "latest",
     "prop-types": "latest",
     "react": "latest",
+    "react-copy-to-clipboard": "latest",
     "react-dom": "latest",
     "react-helmet": "latest"
   },
