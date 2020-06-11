@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"3XHS":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),c=a("Bl7J");t.default=function(){return r.a.createElement(c.a,{pageTitle:"About",createdYear:"2020"},r.a.createElement("h2",null,"About FORNO"),r.a.createElement("p",null,"FORNO is a virtual charactor on internet."))}}}]);
-//# sourceMappingURL=component---src-pages-about-js-01a19aa9890b7c3094cb.js.map
+//# sourceMappingURL=component---src-pages-about-js-1febdfb0a59188da8295.js.map
