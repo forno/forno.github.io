@@ -9,7 +9,7 @@ import Footer from "./footer";
 const Layout = ({ children, pageTitle, createdYear }) => (
   <>
     <SEO title={pageTitle} />
-    <Header />
+    <Header pageTitle={pageTitle} />
     <Container component="main" maxWidth="sm">
       {children}
     </Container>

@@ -17,7 +17,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
 import Link from "./link";
 
-const Header = ({ siteTitle }) => {
+const Header = ({ pageTitle, siteTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -56,6 +56,8 @@ const Header = ({ siteTitle }) => {
           </IconButton>
           <Link to="/" color="inherit">
             <Typography component="h1" variant="h6">
+              {pageTitle}
+              {" | "}
               {headerTitle}
             </Typography>
           </Link>
@@ -105,6 +107,7 @@ const Header = ({ siteTitle }) => {
 };
 
 Header.propTypes = {
+  pageTitle: PropTypes.string.isRequired,
   siteTitle: PropTypes.string,
 };
 
