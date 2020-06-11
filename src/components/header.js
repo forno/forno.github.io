@@ -12,6 +12,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import FormatAlignLeftIcon from "@material-ui/icons/FormatAlignLeft";
+import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from "@material-ui/icons/Info";
 import MenuIcon from "@material-ui/icons/Menu";
 import Link from "./link";
@@ -71,6 +72,14 @@ const Header = ({ siteTitle }) => {
           onKeyDown={toggleDrawer("left", false)}
         >
           <List>
+            <Link to="/" color="inherit">
+              <ListItem>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </Link>
             <Link to="/about" color="inherit">
               <ListItem>
                 <ListItemIcon>
@@ -86,14 +95,6 @@ const Header = ({ siteTitle }) => {
                   <FormatAlignLeftIcon />
                 </ListItemIcon>
                 <ListItemText primary="Reformat English" />
-              </ListItem>
-            </Link>
-            <Link to="/tools/pick-random" color="inherit">
-              <ListItem>
-                <ListItemIcon>
-                  <FormatAlignLeftIcon />
-                </ListItemIcon>
-                <ListItemText primary="Pick Random" />
               </ListItem>
             </Link>
           </List>
