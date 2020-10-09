@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),l=n.n(t),o=n("Bl7J");a.default=function(){return l.a.createElement(o.a,{pageTitle:"Home",createdYear:"2017"},l.a.createElement("h2",null,"FORNO's portfolio"),l.a.createElement("p",null,"Now avalable are Tools only."))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-6f8b959ea938d73eac8f.js.map
