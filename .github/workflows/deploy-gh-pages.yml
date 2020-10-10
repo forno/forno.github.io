@@ -17,4 +17,4 @@ jobs:
     - uses: actions/setup-node@v1
     - run: yarn
     - run: yarn build --if-presen
-    - run: yarn -s run gh-pages -d .docz/public -u "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" -r "https://git:${{ github.token }}@github.com/${{ github.repository }}.git"
+    - run: yarn -s run gh-pages -d .docz/dist -u "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>" -r "https://git:${{ github.token }}@github.com/${{ github.repository }}.git"
