@@ -17,5 +17,5 @@ jobs:
     - uses: actions/setup-node@v1
     - run: yarn
     - run: yarn build --if-presen
-    - run: echo ${{ secrets.DEPLOY_KEY }} >> ~/.ssh/id
+    - run: echo "${{ secrets.DEPLOY_KEY }}" >> ~/.ssh/id
     - run: yarn -s run gh-pages -d .docz/public
