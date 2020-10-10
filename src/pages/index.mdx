@@ -4,9 +4,16 @@ route: /
 ---
 
 import { Image } from "theme-ui";
+import Icon from "../images/icon.png";
+import {Link} from 'gatsby'
 
 # The FORNO's Portfolio
 
 こんにちは「フォルノ」です．通称「ふぉるにゃー」です．
 
-![Avatar](../images/icon.png)
+<Image src={Icon} variant='avatar' />
+
+## Just on the site works
+Toolsにはこのサイトで利用できる便利機能があります．
+
+- <Link to='/tools/reformat-english'>Reformat English</Link>

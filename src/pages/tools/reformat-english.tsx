@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button } from 'theme-ui';
-import { ReformatTextarea } from "../../components/ReformatTextarea";
+import ReformatTextarea from "../../components/ReformatTextarea";
 
 type ReformatEnglishState = {
   text: string;
 };
 
-export class ReformatEnglish extends React.Component<{}, ReformatEnglishState> {
+class ReformatEnglish extends React.Component<{}, ReformatEnglishState> {
   constructor(props: {}) {
     super(props);
     this.state = {text: ''};
@@ -25,3 +25,5 @@ export class ReformatEnglish extends React.Component<{}, ReformatEnglishState> {
     );
   }
 }
+
+export default ReformatEnglish;

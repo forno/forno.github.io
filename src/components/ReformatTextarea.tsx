@@ -6,7 +6,7 @@ type ReformatTextareaProps = {
   onTextChange: (text: string) => void;
 }
 
-export const ReformatTextarea: FC<ReformatTextareaProps> = props => {
+const ReformatTextarea: FC<ReformatTextareaProps> = props => {
   const onTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const text: string = e.target.value
       .replace(/\n/g, " ")
@@ -17,3 +17,5 @@ export const ReformatTextarea: FC<ReformatTextareaProps> = props => {
 
   return <Textarea value={props.value} onChange={onTextChange} />;
 }
+
+export default ReformatTextarea;
