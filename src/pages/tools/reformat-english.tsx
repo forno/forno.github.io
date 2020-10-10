@@ -20,7 +20,7 @@ export class ReformatEnglish extends React.Component<{}, ReformatEnglishState> {
     return (
       <>
         <ReformatTextarea value={this.state.text} onTextChange={e => this.handleTextChange(e)} />
-        <Button onChange={() => alert('test')}>Copy</Button>
+        <Button onClick={() => navigator.clipboard?.writeText(this.state.text) && alert('copied')}>Copy</Button>
       </>
     );
   }
