@@ -1,11 +1,10 @@
 ---
 name: Alert
-route: /components/alert
 menu: Components
 ---
 
 import { Playground, Props } from 'docz'
-import { Alert } from './Alert'
+import { Alert } from './Alert.tsx'
 
 # Alert
 
@@ -16,7 +15,7 @@ import { Alert } from './Alert'
 ## Basic usage
 
 <Playground>
-  <Alert>Some message</Alert>
+  <Alert kind="warning">Some message</Alert>
 </Playground>
 
 ## Using different kinds

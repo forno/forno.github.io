@@ -1,19 +1,28 @@
 {
-  "name": "docz-example-basic",
-  "version": "2.0.0",
+  "name": "forno-portfolio",
+  "version": "0.0.1",
   "license": "MIT",
+  "files": [
+    "src/",
+    "doczrc.js",
+    "tsconfig.json",
+    "package.json"
+  ],
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build",
-    "serve": "docz serve"
+    "build": "docz build"
   },
   "dependencies": {
-    "@react-native-community/clipboard": "^1.4.0",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
     "docz": "latest",
     "gatsby-plugin-manifest": "^2.4.34",
     "gatsby-plugin-offline": "^3.2.31",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4"
   }
 }
