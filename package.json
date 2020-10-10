@@ -19,7 +19,8 @@
     "gatsby-plugin-manifest": "^2.4.34",
     "gatsby-plugin-offline": "^3.2.31",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "@types/react": "^16.8.23",
