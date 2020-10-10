@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  develop:
+    image: node:14-slim
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: .
+        target: /data
+    working_dir: /data
+    user: "${UID}:${GID}"
+    command: yarn dev --host 0.0.0.0

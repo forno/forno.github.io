@@ -1,52 +1,19 @@
 {
-  "name": "forno-portfolio",
-  "private": true,
-  "description": "The sources of FONRO's portfolio",
-  "version": "0.1.0",
-  "author": "FORNO <forno@xmaho.link>",
-  "dependencies": {
-    "@material-ui/core": "latest",
-    "@material-ui/icons": "latest",
-    "@material-ui/styles": "latest",
-    "gatsby": "latest",
-    "gatsby-image": "latest",
-    "gatsby-plugin-manifest": "latest",
-    "gatsby-plugin-material-ui": "latest",
-    "gatsby-plugin-offline": "latest",
-    "gatsby-plugin-react-helmet": "latest",
-    "gatsby-plugin-sharp": "latest",
-    "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-sharp": "latest",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-copy-to-clipboard": "latest",
-    "react-dom": "latest",
-    "react-helmet": "latest"
-  },
-  "devDependencies": {
-    "gatsby-cli": "latest",
-    "gh-pages": "latest",
-    "prettier": "latest"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "name": "docz-example-basic",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "deploy": "npm run format && npm run build && cp LICENSE public && gh-pages -d public -b master",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "docz dev",
+    "build": "docz build",
+    "serve": "docz serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/forno/forno.github.io"
-  },
-  "bugs": {
-    "url": "https://github.com/forno/forno.github.io/issues"
+  "dependencies": {
+    "@react-native-community/clipboard": "^1.4.0",
+    "docz": "latest",
+    "gatsby-plugin-manifest": "^2.4.34",
+    "gatsby-plugin-offline": "^3.2.31",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }
