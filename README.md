@@ -1,29 +1,17 @@
-# Typescript Docz example
+# The FORNO portfolio
+The sources of my portfolio.
 
-## Using `create-docz-app`
+publish on https://forno.github.io
 
-```sh
-npx create-docz-app docz-app-typescript --example typescript
-# or
-yarn create docz-app docz-app-typescript --example typescript
+## How to develop
+
+```bash
+git clone https://github.com/forno/forno.github.io.git
+cd forno.github.io
+docker-compose up
 ```
 
-## Download manually
+You see it on http://localhost:3000
 
-```sh
-curl https://codeload.github.com/doczjs/docz/tar.gz/master | tar -xz --strip=2 docz-master/examples/typescript
-mv typescript docz-typescript-example
-cd docz-typescript-example
-```
-
-## Setup
-
-```sh
-yarn # npm i
-```
-
-## Run
-
-```sh
-yarn dev # npm run dev
-```
+## LICENSE
+This software is released under the MIT License, see LICENSE.
