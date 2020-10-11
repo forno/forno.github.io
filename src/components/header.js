@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, useColorMode } from "theme-ui";
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -22,7 +24,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
-import { useColorMode } from "theme-ui"
 
 const drawerWidth = 240
 
@@ -122,7 +123,8 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Typography>
           <IconButton
-            style={{ marginLeft: "auto" }}
+            color="inherit"
+            sx={{ marginLeft: "auto" }}
             onClick={() =>
               setColorMode(colorMode === "default" ? "dark" : "default")
             }
@@ -142,7 +144,7 @@ const Header = ({ siteTitle }) => {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? (
+            {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
               <ChevronRightIcon />
