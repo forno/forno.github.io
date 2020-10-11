@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header
       sx={{
-        bg: `darken`,
+        bg: `gray`,
         marginBottom: `1.45rem`,
       }}
     >
@@ -25,7 +25,6 @@ const Header = ({ siteTitle }) => {
           <Link
             to="/"
             sx={{
-              color: `white`,
               textDecoration: `none`,
             }}
           >
