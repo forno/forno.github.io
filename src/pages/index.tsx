@@ -1,7 +1,8 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby-theme-material-ui'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import { Typography } from '@material-ui/core'
 
 export default () => (
   <Layout createdAt={2017}>
