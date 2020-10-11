@@ -3,11 +3,11 @@ services:
   develop:
     image: node
     ports:
-      - "3000:3000"
+      - "8000:8000"
     volumes:
       - type: bind
         source: .
         target: /data
     working_dir: /data
     user: "${UID}:${GID}"
-    command: yarn dev --host 0.0.0.0
+    command: npm run develop -- --host 0.0.0.0

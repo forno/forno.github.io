@@ -10,12 +10,12 @@ WORKDIR /home/node/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY --chown=node package*.json yarn.lock ./
-RUN yarn
+COPY --chown=node package*.json ./
+RUN npm i
 
 # Bundle app source code
 COPY --chown=node . .
-RUN yarn build
+RUN npm run build
 
-FROM nginx:alpine
-COPY --from=build /home/node/app/.docz/dist /usr/share/nginx/html
+FROM nginx:alpine as deploy
+COPY --from=build /home/node/app/public /usr/share/nginx/html

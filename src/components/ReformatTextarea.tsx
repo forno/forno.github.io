@@ -8,14 +8,14 @@ type ReformatTextareaProps = {
 
 const ReformatTextarea: FC<ReformatTextareaProps> = props => {
   const onTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const text: string = e.target.value
+    const formatedText: string = e.target.value
       .replace(/\n/g, " ")
       .replace(/\. {2,}/g, ". \n")
       .replace(/\. ?/g, ".\n");
-    props.onTextChange(text);
+    props.onTextChange(formatedText);
   }
 
-  return <Textarea value={props.value} onChange={onTextChange} />;
+  return <Textarea value={props.value} onChange={onTextChange} rows={Array.from(props.value).filter(e => e === '\n').length + 2}/>;
 }
 
 export default ReformatTextarea;
