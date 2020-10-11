@@ -9,7 +9,7 @@ import Header from "./header"
 const Layout = ({ children, createdAt = new Date().getFullYear(), title = '' }) => {
   const now = new Date().getFullYear();
 
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -22,7 +22,7 @@ const Layout = ({ children, createdAt = new Date().getFullYear(), title = '' }) 
 
   return (
     <React.Fragment>{/* ESLint print warn for React. disable it with explicit React.Fragment */}
-      <Header siteTitle={`${title}${title && ` | `}${data?.site?.siteMetadata?.title || `Title`}`} />
+      <Header siteTitle={`${title}${title && ` | `}${site.siteMetadata?.title || `Title`}`} />
       <div
         sx={{
           margin: `0 auto`,
@@ -34,7 +34,7 @@ const Layout = ({ children, createdAt = new Date().getFullYear(), title = '' }) 
         <footer sx={{
           marginTop: `2rem`
         }}>
-          © {createdAt}{createdAt !== now && ` - ${now}`} {data?.site?.siteMetadata?.author || `FORNO`}
+          © {createdAt}{createdAt !== now && ` - ${now}`} {site.siteMetadata?.author || `FORNO`}
         </footer>
       </div>
     </React.Fragment>
