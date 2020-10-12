@@ -20,9 +20,10 @@ class ReformatEnglish extends React.Component<{}, ReformatEnglishState> {
 
   render() {
     return (
-      <Layout title="The Reformat English tool">
+      <Layout title="Reformat English">
         <SEO title="Reformat English" />
 
+        <h1>英語のフォーマットツール</h1>
         <p>このツールはPDF等から英語をコピーした時の改行が壊れている文章を整形します．
         論文を翻訳機にかける前や上手くコピーできない英語にお使いください．</p>
 

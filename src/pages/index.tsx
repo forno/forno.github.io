@@ -7,7 +7,7 @@ import { Typography } from '@material-ui/core'
 export default () => (
   <Layout createdAt={2017}>
     <SEO title="Home" />
-    <h1>The FORNO's Portfolio</h1>
+    <h1>フォルノの情報サイト</h1>
     <p>こんにちは「フォルノ」です．通称「ふぉるにゃー」です．</p>
     <h2>Just on the site works</h2>
     <p>Toolsにはこのサイトで利用できる便利機能があります．</p>

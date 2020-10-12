@@ -22,7 +22,7 @@ const Layout = ({ children, createdAt = new Date().getFullYear(), title = '' }) 
 
   return (
     <React.Fragment>{/* ESLint print warn for React. disable it with explicit React.Fragment */}
-      <Header siteTitle={`${title}${title && ` | `}${site.siteMetadata?.title || `Title`}`} />
+      <Header siteTitle={`${title || site.siteMetadata?.title || `Title`}`} />
       <div
         sx={{
           margin: `0 auto`,
