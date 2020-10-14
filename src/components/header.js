@@ -124,6 +124,7 @@ const Header = ({ siteTitle }) => {
           </Typography>
           <IconButton
             color="inherit"
+            aria-label="Change Light mode"
             sx={{ marginLeft: "auto" }}
             onClick={() =>
               setColorMode(colorMode === "default" ? "dark" : "default")
