@@ -1,17 +1,12 @@
-# The FORNO portfolio
-The sources of my portfolio.
+# forno.github.io
 
-publish on https://forno.github.io
+Minimal static redirect to https://xmaho.link/.
 
-## How to develop
+- Files: `index.html`, `sw.js`
+- Purpose: retire the old Gatsby site and ensure visitors are redirected without needing a hard refresh, even if a previous service worker is installed.
 
-```bash
-git clone https://github.com/forno/forno.github.io.git
-cd forno.github.io
-docker-compose up
-```
+How it works
+- `index.html` issues a meta refresh and JavaScript `location.replace` to `https://xmaho.link/`, and registers the service worker for one-time cleanup for returning visitors.
+- `sw.js` takes control, clears old caches, unregisters itself, and redirects navigations to the new domain.
 
-You see it on http://localhost:3000
-
-## LICENSE
-This software is released under the MIT License, see LICENSE.
+No build step is required; GitHub Pages serves the files from the repository root.
